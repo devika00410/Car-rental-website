@@ -7,9 +7,8 @@ import FeaturedCars from './Components/FeaturedCars';
 import DiscountsAndOffers from './Components/DiscountAndOffers';
 import CarList from './Pages/CarList';
 import LoginPage from './Pages/LoginPage';
-import BookingPage from './Pages/BookingPage';
 import HomePage from './Pages/Homepage';
-import ProductInfoPage from './Pages/ProductApp';
+
 
 // Create Auth Context
 const AuthContext = createContext();
@@ -85,16 +84,6 @@ function App() {
             <Route path="/pre-booking" element={<CarList />} />
             <Route path="/product-info" element={<ProductInfoPage />} />
             <Route path="/login" element={<LoginPage />} />
-            
-            {/* Protected route - only accessible when logged in */}
-            <Route 
-              path="/booking" 
-              element={
-                <ProtectedRoute>
-                  <BookingPage />
-                </ProtectedRoute>
-              } 
-            />
           </Routes>
         </div>
       </Router>
@@ -103,4 +92,4 @@ function App() {
 }
 
 export default App;
-export { useAuth }; // Export useAuth for use in other components
+export { useAuth }; 
