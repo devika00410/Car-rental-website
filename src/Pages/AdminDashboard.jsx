@@ -1,294 +1,284 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../App';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {
-  const { admin, adminLogout } = useAuth();
-  const [activeTab, setActiveTab] = useState('overview');
-  const [pendingApprovals, setPendingApprovals] = useState([]);
-  const [pendingPayments, setPendingPayments] = useState([]);
-  const [notifications, setNotifications] = useState([]);
-  const [stats, setStats] = useState({
-    totalUsers: 0,
-    totalCars: 0,
-    totalBookings: 0,
-    revenue: 0,
-    pendingApprovals: 0,
-    pendingPayments: 0,
-    unreadNotifications: 0
+  const [activeTab, setActiveTab] = useState('cars');
+  const [cars, setCars] = useState([]);
+  const [newCar, setNewCar] = useState({
+    name: '',
+    type: 'economy',
+    image: '',
+    price: '',
+    color: 'black',
+    rating: 5,
+    seats: 4,
+    location: '',
+    make: '',
+    model: ''
   });
 
+  // Load cars from localStorage on component mount
   useEffect(() => {
-    loadDashboardData();
+    const savedCars = JSON.parse(localStorage.getItem('adminCars') || '[]');
+    setCars(savedCars);
   }, []);
 
-  const loadDashboardData = () => {
-    const agencies = JSON.parse(localStorage.getItem('pendingAgencies') || '[]');
-    const storedNotifications = JSON.parse(localStorage.getItem('adminNotifications') || '[]');
-    const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
-    const cars = JSON.parse(localStorage.getItem('cars') || '[]');
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewCar(prev => ({
+      ...prev,
+      [name]: name === 'price' || name === 'rating' || name === 'seats' ? Number(value) : value
+    }));
+  };
 
-    const pendingPaymentBookings = bookings.filter(booking => 
-      booking.status === 'pending_payment' || booking.paymentStatus === 'pending'
-    );
-
-    const confirmedBookings = bookings.filter(booking => 
-      booking.status === 'confirmed' || booking.paymentStatus === 'approved'
-    );
-    const revenue = confirmedBookings.reduce((sum, booking) => sum + (booking.total || booking.amount || 0), 0);
-
-    const unreadNotifications = storedNotifications.filter(notif => !notif.read).length;
-
-    setPendingApprovals(agencies);
-    setNotifications(storedNotifications);
-    setPendingPayments(pendingPaymentBookings);
+  const handleAddCar = (e) => {
+    e.preventDefault();
     
-    setStats({
-      totalUsers: users.length,
-      totalCars: cars.length,
-      totalBookings: bookings.length,
-      revenue: revenue,
-      pendingApprovals: agencies.length,
-      pendingPayments: pendingPaymentBookings.length,
-      unreadNotifications: unreadNotifications
+    const carToAdd = {
+      ...newCar,
+      id: `admin-car-${Date.now()}`,
+      price: Number(newCar.price)
+    };
+
+    const updatedCars = [...cars, carToAdd];
+    setCars(updatedCars);
+    localStorage.setItem('adminCars', JSON.stringify(updatedCars));
+    
+    // Reset form
+    setNewCar({
+      name: '',
+      type: 'economy',
+      image: '',
+      price: '',
+      color: 'black',
+      rating: 5,
+      seats: 4,
+      location: '',
+      make: '',
+      model: ''
     });
+
+    alert('Car added successfully!');
   };
 
-  const handleAgencyApproval = (agencyId, approve) => {
-    const agencies = JSON.parse(localStorage.getItem('pendingAgencies') || '[]');
-    const agency = agencies.find(a => a.id === agencyId);
-    
-    if (approve) {
-      const approvedAgencies = JSON.parse(localStorage.getItem('agencies') || '[]');
-      approvedAgencies.push({
-        ...agency,
-        approved: true,
-        approvedDate: new Date().toISOString()
-      });
-      localStorage.setItem('agencies', JSON.stringify(approvedAgencies));
-
-      const existingCars = JSON.parse(localStorage.getItem('cars') || '[]');
-      const newCars = agency.cars.map(car => ({
-        ...car,
-        agencyId: agency.id,
-        agencyName: agency.agencyName,
-        approved: true
-      }));
-      localStorage.setItem('cars', JSON.stringify([...existingCars, ...newCars]));
+  const handleDeleteCar = (carId) => {
+    if (window.confirm('Are you sure you want to delete this car?')) {
+      const updatedCars = cars.filter(car => car.id !== carId);
+      setCars(updatedCars);
+      localStorage.setItem('adminCars', JSON.stringify(updatedCars));
     }
-
-    const updatedAgencies = agencies.filter(a => a.id !== agencyId);
-    localStorage.setItem('pendingAgencies', JSON.stringify(updatedAgencies));
-    loadDashboardData();
-  };
-
-  const handlePaymentApproval = (bookingId, approve) => {
-    const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
-    const bookingIndex = bookings.findIndex(booking => booking.id === bookingId);
-    
-    if (bookingIndex !== -1) {
-      if (approve) {
-        bookings[bookingIndex].paymentStatus = 'approved';
-        bookings[bookingIndex].status = 'confirmed';
-      } else {
-        bookings[bookingIndex].paymentStatus = 'rejected';
-        bookings[bookingIndex].status = 'cancelled';
-      }
-      
-      localStorage.setItem('bookings', JSON.stringify(bookings));
-      loadDashboardData();
-    }
-  };
-
-  const markAllNotificationsAsRead = () => {
-    const updatedNotifications = notifications.map(notif => ({ ...notif, read: true }));
-    localStorage.setItem('adminNotifications', JSON.stringify(updatedNotifications));
-    setNotifications(updatedNotifications);
-    loadDashboardData();
-  };
-
-  const handleLogout = () => {
-    adminLogout();
-    window.location.href = '/';
   };
 
   return (
     <div className="admin-dashboard">
       <header className="admin-header">
-        <div>
-          <h1>Admin Dashboard</h1>
-          <p>Welcome back, {admin?.username}</p>
-        </div>
-        <button onClick={handleLogout} className="logout-btn">
-          Logout
-        </button>
+        <h1>Admin Dashboard</h1>
+        <p>Manage cars and bookings</p>
       </header>
 
-      <div className="stats-grid">
-        <div className="stat-card">
-          <h3>{stats.totalUsers}</h3>
-          <p>Total Users</p>
-        </div>
-        <div className="stat-card">
-          <h3>{stats.totalCars}</h3>
-          <p>Total Cars</p>
-        </div>
-        <div className="stat-card">
-          <h3>{stats.totalBookings}</h3>
-          <p>Total Bookings</p>
-        </div>
-        <div className="stat-card">
-          <h3>₹{stats.revenue.toLocaleString()}</h3>
-          <p>Total Revenue</p>
-        </div>
+      <div className="admin-tabs">
+        <button 
+          className={`admin-tab ${activeTab === 'cars' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('cars')}
+        >
+          Manage Cars
+        </button>
+        <button 
+          className={`admin-tab ${activeTab === 'bookings' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('bookings')}
+        >
+          View Bookings
+        </button>
       </div>
 
-      <div className="dashboard-content">
-        <nav className="sidebar">
-          <div className="nav-section">
-            <button 
-              onClick={() => setActiveTab('overview')} 
-              className={activeTab === 'overview' ? 'nav-btn active' : 'nav-btn'}
-            >
-              Overview
-            </button>
-            <button 
-              onClick={() => setActiveTab('approvals')} 
-              className={activeTab === 'approvals' ? 'nav-btn active' : 'nav-btn'}
-            >
-              Agency Approvals {stats.pendingApprovals > 0 && <span className="badge">{stats.pendingApprovals}</span>}
-            </button>
-            <button 
-              onClick={() => setActiveTab('payments')} 
-              className={activeTab === 'payments' ? 'nav-btn active' : 'nav-btn'}
-            >
-              Payments {stats.pendingPayments > 0 && <span className="badge">{stats.pendingPayments}</span>}
-            </button>
-            <button 
-              onClick={() => setActiveTab('notifications')} 
-              className={activeTab === 'notifications' ? 'nav-btn active' : 'nav-btn'}
-            >
-              Notifications {stats.unreadNotifications > 0 && <span className="badge">{stats.unreadNotifications}</span>}
-            </button>
-          </div>
-        </nav>
+      <main className="admin-main-content">
+        {activeTab === 'cars' && (
+          <div className="admin-section">
+            <div className="section-header">
+              <h2>Add New Car</h2>
+            </div>
 
-        <main className="main-content">
-          {activeTab === 'overview' && (
-            <div className="tab-content">
-              <h2>Platform Overview</h2>
-              <div className="recent-notifications">
-                <h3>Recent Notifications</h3>
-                {notifications.slice(0, 3).map(notification => (
-                  <div key={notification.id} className="notification-item">
-                    <p>{notification.message}</p>
-                    <span>{new Date(notification.timestamp).toLocaleString()}</span>
+            <form onSubmit={handleAddCar} className="car-form">
+              <div className="form-grid">
+                <div className="form-group">
+                  <label>Car Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={newCar.name}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Make</label>
+                  <input
+                    type="text"
+                    name="make"
+                    value={newCar.make}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Model</label>
+                  <input
+                    type="text"
+                    name="model"
+                    value={newCar.model}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Type</label>
+                  <select
+                    name="type"
+                    value={newCar.type}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="economy">Economy</option>
+                    <option value="luxury">Luxury</option>
+                    <option value="suv">SUV</option>
+                    <option value="sedan">Sedan</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label>Price per Day (₹)</label>
+                  <input
+                    type="number"
+                    name="price"
+                    value={newCar.price}
+                    onChange={handleInputChange}
+                    min="0"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Color</label>
+                  <select
+                    name="color"
+                    value={newCar.color}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="silver">Silver</option>
+                    <option value="gray">Gray</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label>Seats</label>
+                  <input
+                    type="number"
+                    name="seats"
+                    value={newCar.seats}
+                    onChange={handleInputChange}
+                    min="1"
+                    max="12"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Rating (1-5)</label>
+                  <input
+                    type="number"
+                    name="rating"
+                    value={newCar.rating}
+                    onChange={handleInputChange}
+                    min="1"
+                    max="5"
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Location</label>
+                  <input
+                    type="text"
+                    name="location"
+                    value={newCar.location}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+
+                <div className="form-group full-width">
+                  <label>Image URL</label>
+                  <input
+                    type="url"
+                    name="image"
+                    value={newCar.image}
+                    onChange={handleInputChange}
+                    placeholder="https://example.com/car-image.jpg"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button type="submit" className="submit-btn">
+                Add Car
+              </button>
+            </form>
+
+            <div className="section-header">
+              <h2>Managed Cars ({cars.length})</h2>
+            </div>
+
+            {cars.length === 0 ? (
+              <div className="empty-state">
+                <p>No cars added yet. Add your first car above.</p>
+              </div>
+            ) : (
+              <div className="cars-grid">
+                {cars.map(car => (
+                  <div key={car.id} className="car-card">
+                    <img src={car.image} alt={car.name} className="car-image" />
+                    <div className="car-details">
+                      <h3>{car.name}</h3>
+                      <p>{car.make} {car.model}</p>
+                      <p>Type: {car.type}</p>
+                      <p>Price: ₹{car.price}/day</p>
+                      <p>Color: {car.color}</p>
+                      <p>Seats: {car.seats}</p>
+                      <p>Rating: {car.rating} ★</p>
+                      <p>Location: {car.location}</p>
+                    </div>
+                    <button 
+                      onClick={() => handleDeleteCar(car.id)}
+                      className="delete-btn"
+                    >
+                      Delete
+                    </button>
                   </div>
                 ))}
-                {notifications.length === 0 && <p>No notifications yet</p>}
               </div>
-            </div>
-          )}
+            )}
+          </div>
+        )}
 
-          {activeTab === 'approvals' && (
-            <div className="tab-content">
-              <h2>Agency Approval Requests</h2>
-              {pendingApprovals.length === 0 ? (
-                <p>No pending agency approvals</p>
-              ) : (
-                <div className="approvals-list">
-                  {pendingApprovals.map(agency => (
-                    <div key={agency.id} className="approval-item">
-                      <div className="agency-info">
-                        <h4>{agency.agencyName}</h4>
-                        <p>Owner: {agency.owner}</p>
-                        <p>Email: {agency.email}</p>
-                        <p>Cars: {agency.cars.length}</p>
-                      </div>
-                      <div className="action-buttons">
-                        <button onClick={() => handleAgencyApproval(agency.id, true)} className="btn btn-primary">
-                          Approve
-                        </button>
-                        <button onClick={() => handleAgencyApproval(agency.id, false)} className="btn btn-secondary">
-                          Reject
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
+        {activeTab === 'bookings' && (
+          <div className="admin-section">
+            <div className="section-header">
+              <h2>All Bookings</h2>
             </div>
-          )}
-
-          {activeTab === 'payments' && (
-            <div className="tab-content">
-              <h2>Payment Approvals</h2>
-              {pendingPayments.length === 0 ? (
-                <p>No pending payments</p>
-              ) : (
-                <div className="table-container">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>User</th>
-                        <th>Car</th>
-                        <th>Amount</th>
-                        <th>Date</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {pendingPayments.map(booking => (
-                        <tr key={booking.id}>
-                          <td>{booking.user?.name || 'Unknown'}</td>
-                          <td>{booking.car?.name || 'Unknown'}</td>
-                          <td>₹{booking.total || booking.amount || 0}</td>
-                          <td>{new Date(booking.date).toLocaleDateString()}</td>
-                          <td>
-                            <div className="action-buttons">
-                              <button onClick={() => handlePaymentApproval(booking.id, true)} className="btn btn-primary">
-                                Approve
-                              </button>
-                              <button onClick={() => handlePaymentApproval(booking.id, false)} className="btn btn-secondary">
-                                Reject
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
+            <div className="empty-state">
+              <p>Booking management feature coming soon.</p>
             </div>
-          )}
-
-          {activeTab === 'notifications' && (
-            <div className="tab-content">
-              <div className="notifications-header">
-                <h2>All Notifications</h2>
-                <button onClick={markAllNotificationsAsRead} className="btn btn-secondary">
-                  Mark all as read
-                </button>
-              </div>
-              
-              {notifications.length === 0 ? (
-                <p>No notifications</p>
-              ) : (
-                <div className="notifications-list">
-                  {notifications.map(notification => (
-                    <div key={notification.id} className="notification-item">
-                      <p>{notification.message}</p>
-                      <span>{new Date(notification.timestamp).toLocaleString()}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-        </main>
-      </div>
+          </div>
+        )}
+      </main>
     </div>
   );
 };

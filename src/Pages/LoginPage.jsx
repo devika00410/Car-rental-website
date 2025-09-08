@@ -11,7 +11,7 @@ const LoginPage = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
-  const navigate = useNavigate(); // Initialize navigate function
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +20,7 @@ const LoginPage = () => {
       [name]: value
     }));
     
-    // Clear error when user starts typing
+    
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -47,7 +47,7 @@ const LoginPage = () => {
 
   // Function to check if user exists and password matches
   const authenticateUser = (email, password) => {
-    // Get users from localStorage (assuming you stored them during signup)
+    // Get users from localStorage 
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     
     // Find user with matching email
@@ -57,12 +57,22 @@ const LoginPage = () => {
       return { success: false, message: 'No account found with this email' };
     }
     
-    // Check if password matches (in a real app, you'd compare hashed passwords)
+    // Check if password matches 
     if (user.password !== password) {
       return { success: false, message: 'Incorrect password' };
     }
     
-    return { success: true, user: { name: user.name, email: user.email } };
+    // Return complete user data including role
+    return { 
+      success: true, 
+      user: { 
+        username: user.username, 
+        email: user.email,
+        role: user.role,
+        agencyName: user.agencyName,
+        agencyAddress: user.agencyAddress
+      } 
+    };
   };
 
   const handleSubmit = (e) => {
@@ -119,8 +129,7 @@ const LoginPage = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className={`block w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'} focus:outline-none focus:ring-2`}
-                placeholder="Enter your email"
-              />
+                placeholder="Enter your email"/>
               {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
             </div>
 
@@ -135,8 +144,7 @@ const LoginPage = () => {
                 value={formData.password}
                 onChange={handleChange}
                 className={`block w-full px-4 py-3 rounded-lg border ${errors.password ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'} focus:outline-none focus:ring-2`}
-                placeholder="Enter your password"
-              />
+                placeholder="Enter your password"/>
               {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password}</p>}
             </div>
 
@@ -148,9 +156,8 @@ const LoginPage = () => {
 
             <button 
               type="submit" 
-              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-70 transition-colors duration-200"
-              disabled={isLoading}
-            >
+              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-70 transition-colors duration-200"
+              disabled={isLoading}>
               {isLoading ? (
                 <span className="flex items-center">
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

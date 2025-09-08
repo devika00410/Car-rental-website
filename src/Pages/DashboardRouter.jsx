@@ -1,29 +1,24 @@
-// DashboardRouter.jsx - Create this new component to handle dashboard routing
+
 import React from 'react';
 import { useAuth } from '../App';
-import AdminDashboard from './AdminDashboard';
-import UserDashboard from './UserDashboard';
+import { Navigate } from 'react-router-dom';
 
 const DashboardRouter = () => {
-  const { admin, user } = useAuth();
-  const isAdminLoggedIn = localStorage.getItem('isAdminLoggedIn') === 'true';
-  const isUserLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-
-  if (admin && isAdminLoggedIn) {
-    return <AdminDashboard />;
+  const { user } = useAuth();
+  
+  if (!user) {
+    return <Navigate to="/login" replace />;
   }
-
-  if (user && isUserLoggedIn) {
-    return <UserDashboard />;
+  
+  // Redirect based on user role
+  switch(user.role) {
+    case 'admin':
+      return <Navigate to="/admin/dashboard" replace />;
+    case 'agency':
+      return <Navigate to="/company-dashboard" replace />;
+    default:
+      return <Navigate to="/user-dashboard" replace />;
   }
-
-  // If not logged in, you might want to redirect to login
-  return (
-    <div className="page-container">
-      <h1>Access Denied</h1>
-      <p>Please log in to access your dashboard.</p>
-    </div>
-  );
 };
 
 export default DashboardRouter;

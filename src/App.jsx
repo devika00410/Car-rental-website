@@ -23,13 +23,14 @@ import Subscription from './Pages/Subscription';
 // import { ThemeProvider } from './Context/ThemeContext';
 // import ThemeDebugger from './Components/ThemeDebugger';
 import PaymentPage from './Pages/PaymentPage';
+import CompanyDashboard from './Pages/CompanyDashboard';
 
 
 
 // Create Auth Context at the top level
 const AuthContext = createContext();
 
-// Custom hook to use auth context - defined at top level
+// Custom hook to use auth context
 const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
@@ -188,6 +189,15 @@ function App() {
               }
             />
 
+              <Route
+              path="/company-dashboard"
+              element={
+                <ProtectedRoute>
+                  <CompanyDashboard />
+                </ProtectedRoute>
+              }
+            />
+
             {/* Admin routes */}
             <Route path="/admin" element={<AdminLogin />} />
             <Route
@@ -211,6 +221,6 @@ function App() {
   );
 }
 
-// Export the custom hook and components
+// Export the custom hook and component
 export { useAuth };
 export default App;

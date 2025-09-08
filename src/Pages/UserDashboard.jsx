@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../App';
 import { useNavigate } from 'react-router-dom';
-import { 
-  UserIcon, 
-  TruckIcon, 
-  CalendarIcon, 
-  CreditCardIcon,
-  TrashIcon,
-  PlusIcon,
-  ArrowRightIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
 import './UserDashboard.css';
 
 const UserDashboard = () => {
@@ -141,7 +131,6 @@ const UserDashboard = () => {
             <p>Here's your booking overview and recent activity</p>
           </div>
           <button onClick={handleNewBooking} className="new-booking-btn">
-            <PlusIcon className="btn-icon" />
             Book New Car
           </button>
         </div>
@@ -150,9 +139,6 @@ const UserDashboard = () => {
       {/* Stats Cards */}
       <div className="user-stats-grid">
         <div className="user-stat-card">
-          <div className="stat-icon-wrapper">
-            <CalendarIcon className="stat-icon" />
-          </div>
           <div className="stat-content">
             <h3 className="stat-value">{userStats.totalBookings}</h3>
             <p className="stat-label">Total Bookings</p>
@@ -160,9 +146,6 @@ const UserDashboard = () => {
         </div>
 
         <div className="user-stat-card">
-          <div className="stat-icon-wrapper">
-            <TruckIcon className="stat-icon" />
-          </div>
           <div className="stat-content">
             <h3 className="stat-value">{userStats.upcomingBookings}</h3>
             <p className="stat-label">Upcoming Trips</p>
@@ -170,9 +153,6 @@ const UserDashboard = () => {
         </div>
 
         <div className="user-stat-card">
-          <div className="stat-icon-wrapper">
-            <CreditCardIcon className="stat-icon" />
-          </div>
           <div className="stat-content">
             <h3 className="stat-value">₹{userStats.totalSpent.toLocaleString()}</h3>
             <p className="stat-label">Total Spent</p>
@@ -180,9 +160,6 @@ const UserDashboard = () => {
         </div>
 
         <div className="user-stat-card">
-          <div className="stat-icon-wrapper">
-            <StarIcon className="stat-icon" />
-          </div>
           <div className="stat-content">
             <h3 className="stat-value">{userStats.completedBookings}</h3>
             <p className="stat-label">Completed Trips</p>
@@ -193,12 +170,10 @@ const UserDashboard = () => {
       {/* Tabs */}
       <div className="user-tabs">
         <button className={`user-tab ${activeTab === 'bookings' ? 'active' : ''}`} onClick={() => setActiveTab('bookings')}>
-          <CalendarIcon className="tab-icon" />
           My Bookings
           {userBookings.length > 0 && <span className="tab-badge">{userBookings.length}</span>}
         </button>
         <button className={`user-tab ${activeTab === 'profile' ? 'active' : ''}`} onClick={() => setActiveTab('profile')}>
-          <UserIcon className="tab-icon" />
           Profile
         </button>
       </div>
@@ -213,26 +188,20 @@ const UserDashboard = () => {
 
             {userBookings.length === 0 ? (
               <div className="empty-bookings">
-                <TruckIcon className="empty-icon" />
                 <h3>No bookings yet</h3>
                 <p>Start your journey by booking your first car</p>
                 <button onClick={handleNewBooking} className="cta-button">
                   Book Your First Car
-                  <ArrowRightIcon className="btn-icon" />
                 </button>
               </div>
             ) : (
               <div className="bookings-grid">
                 {userBookings.map(booking => (
                   <div key={booking.id} className="booking-card">
-                    <div className="booking-image">
-                      <TruckIcon />
-                    </div>
                     <div className="booking-details">
                       <h3>{getCarName(booking)}</h3>
                       <div className="booking-meta">
                         <span className="booking-date">
-                          <CalendarIcon />
                           {booking.pickupDate} - {booking.returnDate}
                         </span>
                         <span className="booking-amount">₹{booking.amount}</span>
@@ -249,13 +218,11 @@ const UserDashboard = () => {
                       {(booking.status === 'upcoming' || booking.status === 'confirmed') && (
                         <button 
                           onClick={() => handleDeleteBooking(booking.id)}
-                          className="cancel-booking-btn"
-                        >
-                          <TrashIcon />
+                          className="btn-danger"  >
                           Cancel Booking
                         </button>
                       )}
-                      <button className="contact-support-btn">
+                      <button className="btn-secondary">
                         Contact Support
                       </button>
                     </div>
@@ -273,15 +240,10 @@ const UserDashboard = () => {
               <p>Manage your account details and preferences</p>
             </div>
             <div className="profile-card">
-              <div className="profile-header">
-                <div className="profile-avatar">
-                  <UserIcon />
-                </div>
-                <div className="profile-info">
-                  <h3>{user?.username || user?.email}</h3>
-                  <p>{user?.email}</p>
-                  <span className="member-since">Member since {new Date().toLocaleDateString()}</span>
-                </div>
+              <div className="profile-info">
+                <h3>{user?.username || user?.email}</h3>
+                <p>{user?.email}</p>
+                <span className="member-since">Member since {new Date().toLocaleDateString()}</span>
               </div>
               <div className="profile-details">
                 <div className="detail-item">

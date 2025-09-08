@@ -10,7 +10,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { user, admin, logout, adminLogout } = useAuth();
   // const { darkMode, toggleDarkMode } = useTheme();
-  
+
   const isLoggedIn = user !== null;
   const isAdmin = admin !== null;
 
@@ -44,41 +44,41 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className={`px-3 py-2 rounded-md text-sm font-medium ${location.pathname === '/' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
             >
               Home
             </Link>
-            <Link 
-              to="/cars" 
+            <Link
+              to="/cars"
               className={`px-3 py-2 rounded-md text-sm font-medium ${location.pathname === '/cars' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
             >
               Cars
             </Link>
-            <Link 
-              to="/subscription" 
+            <Link
+              to="/subscription"
               className={`px-3 py-2 rounded-md text-sm font-medium ${location.pathname === '/subscription' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
             >
               Subscription
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className={`px-3 py-2 rounded-md text-sm font-medium ${location.pathname === '/about' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
             >
               About
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className={`px-3 py-2 rounded-md text-sm font-medium ${location.pathname === '/contact' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
             >
               Contact
             </Link>
-            
+
             {/* Dashboard link */}
             {(isLoggedIn || isAdmin) && (
-              <Link 
-                to={isAdmin ? "/admin/dashboard" : "/user-dashboard"} 
+              <Link
+                to={isAdmin ? "/admin/dashboard" : "/user-dashboard"}
                 className={`px-3 py-2 rounded-md text-sm font-medium ${location.pathname.includes('dashboard') ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
               >
                 Dashboard
@@ -92,31 +92,28 @@ const Navbar = () => {
             {/* <button
               onClick={toggleDarkMode}
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-              aria-label="Toggle dark mode"
-            >
+              aria-label="Toggle dark mode">
               {darkMode ? <FaSun className="h-5 w-5" /> : <FaMoon className="h-5 w-5" />}
             </button> */}
 
             {/* Conditional rendering based on login status */}
             {(isLoggedIn || isAdmin) ? (
-              <button 
+              <button
                 className="px-3 py-2 bg-violet-600 text-white rounded-md text-sm font-medium hover:bg-violet-700 transition-colors"
-                onClick={handleLogout}
-              >
+                onClick={handleLogout}>
                 Logout
               </button>
             ) : (
               <div className="hidden md:flex items-center space-x-3">
-                <Link 
-                  to="/login" 
+                <Link
+                  to="/login"
                   className="px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 text-sm font-medium transition-colors"
                 >
                   Login
                 </Link>
-                <Link 
-                  to="/signup" 
-                  className="px-3 py-2 bg-violet-600 text-white rounded-md text-sm font-medium hover:bg-violet-700 transition-colors"
-                >
+                <Link
+                  to="/signup"
+                  className="px-3 py-2 bg-violet-600 text-white rounded-md text-sm font-medium hover:bg-violet-700 transition-colors">
                   Sign Up
                 </Link>
               </div>
@@ -126,8 +123,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 focus:outline-none"
-              aria-label="Toggle menu"
-            >
+              aria-label="Toggle menu">
               {isMenuOpen ? <FaTimes className="h-5 w-5" /> : <FaBars className="h-5 w-5" />}
             </button>
           </div>
@@ -137,75 +133,65 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === '/' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                onClick={closeMenu}
-              >
+                onClick={closeMenu}>
                 Home
               </Link>
-              <Link 
-                to="/cars" 
+              <Link
+                to="/cars"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === '/cars' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                onClick={closeMenu}
-              >
+                onClick={closeMenu}>
                 Cars
               </Link>
-              <Link 
-                to="/subscription" 
+              <Link
+                to="/subscription"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === '/subscription' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                onClick={closeMenu}
-              >
+                onClick={closeMenu} >
                 Subscription
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === '/about' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                onClick={closeMenu}
-              >
+                onClick={closeMenu}>
                 About
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === '/contact' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                onClick={closeMenu}
-              >
+                onClick={closeMenu}>
                 Contact
               </Link>
-              
+
               {/* Dashboard link */}
               {(isLoggedIn || isAdmin) && (
-                <Link 
-                  to={isAdmin ? "/admin/dashboard" : "/user-dashboard"} 
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname.includes('dashboard') ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                  onClick={closeMenu}
-                >
+                <Link
+                  to="/dashboard"
+                  className={`nav-link ${location.pathname.includes('dashboard') ? 'active' : ''}`}
+                  onClick={closeMenu}>
                   Dashboard
                 </Link>
               )}
-              
-              {/* Conditional rendering based on login status */}
+
               {(isLoggedIn || isAdmin) ? (
-                <button 
+                <button
                   className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  onClick={handleLogout}
-                >
+                  onClick={handleLogout}>
                   Logout
                 </button>
               ) : (
                 <>
-                  <Link 
-                    to="/login" 
+                  <Link
+                    to="/login"
                     className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === '/login' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                    onClick={closeMenu}
-                  >
+                    onClick={closeMenu}>
                     Login
                   </Link>
-                  <Link 
-                    to="/signup" 
+                  <Link
+                    to="/signup"
                     className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === '/signup' ? 'bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                    onClick={closeMenu}
-                  >
+                    onClick={closeMenu}>
                     Sign Up
                   </Link>
                 </>

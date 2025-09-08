@@ -173,7 +173,7 @@ export default function BookingPage() {
         date: new Date().toISOString()
       };
       
-      // Store temporarily (optional)
+      // Store temporarily
       localStorage.setItem('currentBooking', JSON.stringify(bookingData));
       
       // Navigate to payment page with all necessary data

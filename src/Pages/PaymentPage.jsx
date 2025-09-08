@@ -42,9 +42,8 @@ export default function PaymentPage() {
     setProcessing(true);
     setPaymentError('');
 
-    // Simulate payment processing
+   
     setTimeout(() => {
-      // Simulate random success (80% success rate)
       const isSuccess = Math.random() > 0.2;
       
       if (isSuccess) {
