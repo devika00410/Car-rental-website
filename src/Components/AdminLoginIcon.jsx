@@ -1,4 +1,3 @@
-// src/Components/AdminLoginIcon.jsx
 import React, { useState } from 'react';
 import { LockClosedIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useAuth } from '../App';

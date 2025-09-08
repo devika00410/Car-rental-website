@@ -1,4 +1,3 @@
-// src/pages/CarList.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -203,8 +202,7 @@ const CarList = () => {
                                 <select
                                     value={filters.seats}
                                     onChange={(e) => handleFilterChange("seats", e.target.value)}
-                                    className="block w-full p-2 border border-gray-300 rounded-md"
-                                >
+                                    className="block w-full p-2 border border-gray-300 rounded-md">
                                     <option value="all">All Seats</option>
                                     {seatOptions.map(seat => <option key={seat} value={seat}>{seat} {seat === "1" ? "seat" : "seats"}</option>)}
                                 </select>
@@ -272,8 +270,7 @@ const CarCard = ({ car }) => {
                 <div className="flex space-x-2">
                     <button 
                         onClick={handleBookNow}
-                        className="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
-                    >
+                        className="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
                         Book Now
                     </button>
                     <button   onClick={() => navigate('/car-details', { state: { car } })}

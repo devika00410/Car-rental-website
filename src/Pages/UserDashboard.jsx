@@ -101,6 +101,10 @@ const UserDashboard = () => {
     navigate('/cars');
   };
 
+  const handleContactSupport = () => {
+    navigate('/contact');
+  };
+
   const getStatusBadge = (status) => {
     const statusConfig = {
       confirmed: { class: 'status-confirmed', text: 'Confirmed' },
@@ -218,11 +222,15 @@ const UserDashboard = () => {
                       {(booking.status === 'upcoming' || booking.status === 'confirmed') && (
                         <button 
                           onClick={() => handleDeleteBooking(booking.id)}
-                          className="btn-danger"  >
+                          className="btn-danger"
+                        >
                           Cancel Booking
                         </button>
                       )}
-                      <button className="btn-secondary">
+                      <button 
+                        onClick={handleContactSupport}
+                        className="btn-secondary"
+                      >
                         Contact Support
                       </button>
                     </div>

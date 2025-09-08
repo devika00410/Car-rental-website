@@ -1,4 +1,3 @@
-// src/components/ThemeDebugger.jsx
 import React from 'react';
 import { useTheme } from '../Context/ThemeContext';
 

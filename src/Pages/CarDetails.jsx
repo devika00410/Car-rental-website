@@ -1,4 +1,3 @@
-// CarDetails.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { FaArrowLeft, FaUser, FaHeart, FaMapMarkerAlt, FaShieldAlt, FaStar, FaCarSide, FaGasPump, FaCog } from 'react-icons/fa';
@@ -182,15 +181,13 @@ const CarDetails = () => {
       <div className="bg-white shadow-sm py-4 px-6 flex items-center justify-between">
         <button 
           onClick={() => navigate(-1)}
-          className="flex items-center text-blue-600 hover:text-blue-800"
-        >
+          className="flex items-center text-blue-600 hover:text-blue-800">
           <FaArrowLeft className="mr-2" />
           Back to results
         </button>
         <button 
           onClick={() => setIsFavorite(!isFavorite)}
-          className="flex items-center text-gray-600 hover:text-red-500"
-        >
+          className="flex items-center text-gray-600 hover:text-red-500">
           {isFavorite ? (
             <FaHeart className="text-red-500" />
           ) : (
@@ -232,8 +229,7 @@ const CarDetails = () => {
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.target.src = 'https://via.placeholder.com/100x60?text=Car';
-                        }}
-                      />
+                        }}/>
                     </button>
                   ))}
                 </div>
@@ -294,8 +290,7 @@ const CarDetails = () => {
                 {/* Add Review Button */}
                 <button 
                   onClick={() => setShowReviewForm(!showReviewForm)}
-                  className="mb-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                >
+                  className="mb-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                   {showReviewForm ? 'Cancel Review' : 'Add Your Review'}
                 </button>
                 
@@ -312,8 +307,7 @@ const CarDetails = () => {
                             key={star}
                             type="button"
                             onClick={() => setUserRating(star)}
-                            className="text-2xl mr-1 focus:outline-none"
-                          >
+                            className="text-2xl mr-1 focus:outline-none">
                             {star <= userRating ? (
                               <FaStar className="text-yellow-500" />
                             ) : (
@@ -331,14 +325,12 @@ const CarDetails = () => {
                         onChange={(e) => setUserReview(e.target.value)}
                         className="w-full p-3 border border-gray-300 rounded-lg"
                         rows="4"
-                        placeholder="Share your experience with this car..."
-                      />
+                        placeholder="Share your experience with this car..."/>
                     </div>
                     
                     <button
                       type="submit"
-                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
-                    >
+                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
                       Submit Review
                     </button>
                   </form>
@@ -450,8 +442,7 @@ const CarDetails = () => {
                 <button 
                   onClick={handleReservation}
                   className={`w-full py-3 px-6 rounded-lg font-medium mb-4 ${car.availability ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`}
-                  disabled={!car.availability}
-                >
+                  disabled={!car.availability}>
                   {car.availability ? 'Reserve Now' : 'Not Available'}
                 </button>
 

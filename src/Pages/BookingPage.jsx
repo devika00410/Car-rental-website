@@ -88,13 +88,9 @@ export default function BookingPage() {
   // Check login status
   useEffect(() => {
     const logged = localStorage.getItem('isLoggedIn') === 'true';
-    const name = localStorage.getItem('userName');
-    const email = localStorage.getItem('userEmail');
     
-    if (!logged || !name || !email) {
+    if (!logged) {
       navigate('/login');
-    } else {
-      setUser(u => ({ ...u, name, email }));
     }
   }, [navigate]);
 
@@ -114,6 +110,9 @@ export default function BookingPage() {
   const validate = () => {
     const errs = {};
     
+    if (!user.name?.trim()) errs.name = 'Full name is required';
+    if (!user.email?.trim()) errs.email = 'Email is required';
+    if (!/^\S+@\S+\.\S+$/.test(user.email || '')) errs.email = 'Enter a valid email address';
     if (!/^\d{10}$/.test(user.phone || '')) errs.phone = 'Enter a valid 10-digit phone number';
     if (user.altPhone && !/^\d{10}$/.test(user.altPhone)) errs.altPhone = 'Enter a valid 10-digit alternate phone number';
     if (!user.address?.trim()) errs.address = 'Address is required';
@@ -240,10 +239,10 @@ export default function BookingPage() {
             <SectionTitle title="Your Information" />
             
             <FormRow>
-              <InputField label="Full Name" type="text" name="name" value={user.name} 
-                onChange={handleInputChange(setUser)} disabled={true} />
-              <InputField label="Email Address" type="email" name="email" value={user.email} 
-                onChange={handleInputChange(setUser)} disabled={true} />
+              <InputField label="Full Name *" type="text" name="name" value={user.name} 
+                onChange={handleInputChange(setUser)} error={errors.name} placeholder="Enter your full name" />
+              <InputField label="Email Address *" type="email" name="email" value={user.email} 
+                onChange={handleInputChange(setUser)} error={errors.email} placeholder="Enter your email address" />
             </FormRow>
 
             <FormRow>
@@ -336,8 +335,7 @@ export default function BookingPage() {
             <button 
               type="submit" 
               className={`btn-primary ${availability === 'unavailable' ? 'disabled' : ''}`}
-              disabled={submitting || availability === 'unavailable'}
-            >
+              disabled={submitting || availability === 'unavailable'} >
               {submitting ? 'Processing...' : 
                availability === 'unavailable' ? 'Car Not Available' : 
                `Proceed to Pay ${formatCurrency(calculateTotal())}`}

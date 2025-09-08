@@ -16,7 +16,6 @@ const CompanyDashboard = () => {
   }, []);
 
   const fetchCompanyData = async () => {
-    // In a real application, this would be an API call to your backend
     try {
       // Simulating API call with mock data
       const mockCars = [

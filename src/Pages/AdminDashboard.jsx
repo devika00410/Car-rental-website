@@ -79,14 +79,12 @@ const AdminDashboard = () => {
       <div className="admin-tabs">
         <button 
           className={`admin-tab ${activeTab === 'cars' ? 'active' : ''}`} 
-          onClick={() => setActiveTab('cars')}
-        >
+          onClick={() => setActiveTab('cars')}>
           Manage Cars
         </button>
         <button 
           className={`admin-tab ${activeTab === 'bookings' ? 'active' : ''}`} 
-          onClick={() => setActiveTab('bookings')}
-        >
+          onClick={() => setActiveTab('bookings')}>
           View Bookings
         </button>
       </div>
@@ -107,8 +105,7 @@ const AdminDashboard = () => {
                     name="name"
                     value={newCar.name}
                     onChange={handleInputChange}
-                    required
-                  />
+                    required/>
                 </div>
 
                 <div className="form-group">
@@ -118,8 +115,7 @@ const AdminDashboard = () => {
                     name="make"
                     value={newCar.make}
                     onChange={handleInputChange}
-                    required
-                  />
+                    required/>
                 </div>
 
                 <div className="form-group">
@@ -129,8 +125,7 @@ const AdminDashboard = () => {
                     name="model"
                     value={newCar.model}
                     onChange={handleInputChange}
-                    required
-                  />
+                    required/>
                 </div>
 
                 <div className="form-group">
@@ -139,8 +134,7 @@ const AdminDashboard = () => {
                     name="type"
                     value={newCar.type}
                     onChange={handleInputChange}
-                    required
-                  >
+                    required>
                     <option value="economy">Economy</option>
                     <option value="luxury">Luxury</option>
                     <option value="suv">SUV</option>
@@ -156,8 +150,7 @@ const AdminDashboard = () => {
                     value={newCar.price}
                     onChange={handleInputChange}
                     min="0"
-                    required
-                  />
+                    required/>
                 </div>
 
                 <div className="form-group">
@@ -166,8 +159,7 @@ const AdminDashboard = () => {
                     name="color"
                     value={newCar.color}
                     onChange={handleInputChange}
-                    required
-                  >
+                    required>
                     <option value="black">Black</option>
                     <option value="white">White</option>
                     <option value="silver">Silver</option>
@@ -185,9 +177,7 @@ const AdminDashboard = () => {
                     value={newCar.seats}
                     onChange={handleInputChange}
                     min="1"
-                    max="12"
-                    required
-                  />
+                    max="12"/>
                 </div>
 
                 <div className="form-group">
@@ -199,8 +189,7 @@ const AdminDashboard = () => {
                     onChange={handleInputChange}
                     min="1"
                     max="5"
-                    required
-                  />
+                    required/>
                 </div>
 
                 <div className="form-group">
@@ -210,8 +199,7 @@ const AdminDashboard = () => {
                     name="location"
                     value={newCar.location}
                     onChange={handleInputChange}
-                    required
-                  />
+                    required/>
                 </div>
 
                 <div className="form-group full-width">
@@ -222,8 +210,7 @@ const AdminDashboard = () => {
                     value={newCar.image}
                     onChange={handleInputChange}
                     placeholder="https://example.com/car-image.jpg"
-                    required
-                  />
+                    required/>
                 </div>
               </div>
 
@@ -257,8 +244,7 @@ const AdminDashboard = () => {
                     </div>
                     <button 
                       onClick={() => handleDeleteCar(car.id)}
-                      className="delete-btn"
-                    >
+                      className="delete-btn">
                       Delete
                     </button>
                   </div>

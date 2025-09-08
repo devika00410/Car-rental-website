@@ -1,4 +1,3 @@
-// src/pages/Contact.jsx
 import React, { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaExclamationCircle, FaCheckCircle } from 'react-icons/fa';
 
@@ -58,14 +57,12 @@ const Contact = () => {
       <div className="flex border-b border-gray-200 dark:border-gray-700 mb-8">
         <button
           className={`py-3 px-6 font-medium text-sm rounded-t-lg transition-colors ${activeTab === 'contact' ? 'bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
-          onClick={() => setActiveTab('contact')}
-        >
+          onClick={() => setActiveTab('contact')}>
           Contact Us
         </button>
         <button
           className={`py-3 px-6 font-medium text-sm rounded-t-lg transition-colors ${activeTab === 'issue' ? 'bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
-          onClick={() => setActiveTab('issue')}
-        >
+          onClick={() => setActiveTab('issue')}>
           Report an Issue
         </button>
       </div>
@@ -158,8 +155,7 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleInputChange}
                           className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-violet-500 focus:border-violet-500 dark:bg-gray-700 dark:text-white transition-colors"
-                          required
-                        />
+                          required/>
                       </div>
                       
                       <div>
@@ -171,8 +167,7 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-violet-500 focus:border-violet-500 dark:bg-gray-700 dark:text-white transition-colors"
-                          required
-                        />
+                          required/>
                       </div>
                     </div>
                     
@@ -185,8 +180,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleInputChange}
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-violet-500 focus:border-violet-500 dark:bg-gray-700 dark:text-white transition-colors"
-                        required
-                      />
+                        required/>
                     </div>
                     
                     <div className="mb-6">
@@ -198,8 +192,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleInputChange}
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-violet-500 focus:border-violet-500 dark:bg-gray-700 dark:text-white transition-colors"
-                        required
-                      ></textarea>
+                        required></textarea>
                     </div>
                     
                     <button
@@ -245,8 +238,7 @@ const Contact = () => {
                           value={issueData.type}
                           onChange={handleInputChange}
                           className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-violet-500 focus:border-violet-500 dark:bg-gray-700 dark:text-white transition-colors"
-                          required
-                        >
+                          required>
                           <option value="general">General Issue</option>
                           <option value="booking">Booking Problem</option>
                           <option value="payment">Payment Issue</option>

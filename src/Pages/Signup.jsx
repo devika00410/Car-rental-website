@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Add this import
+import { useNavigate } from 'react-router-dom'; 
 import './Signup.css';
 
 const Signup = () => {
@@ -15,7 +15,7 @@ const Signup = () => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -79,7 +79,7 @@ const Signup = () => {
       const userData = {
         username: formData.username,
         email: formData.email,
-        password: formData.password, // Note: In a real app, you should hash passwords!
+        password: formData.password, 
         role: formData.role,
         agencyName: formData.agencyName,
         agencyAddress: formData.agencyAddress,
@@ -102,8 +102,7 @@ const Signup = () => {
       
       // Save back to localStorage
       localStorage.setItem('users', JSON.stringify(existingUsers));
-      
-      // Also set as current user (optional)
+    
       localStorage.setItem('currentUser', JSON.stringify(userData));
       
       console.log('User registered:', userData);

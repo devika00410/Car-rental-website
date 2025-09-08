@@ -1,4 +1,3 @@
-// HomePage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Form from '../Components/From';

@@ -1,4 +1,3 @@
-// src/pages/Subscription.jsx
 import React, { useState } from 'react';
 import { FaCheck, FaCar, FaCrown, FaStar, FaGem } from 'react-icons/fa';
 

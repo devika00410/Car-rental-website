@@ -16,7 +16,6 @@ const AdminLogin = () => {
     
     // Authentication logic
     if (credentials.username === 'admin' && credentials.password === 'admin123') {
-      // Call the adminLogin function from your auth context
       adminLogin({ username: credentials.username, role: 'administrator' });
       
       // Redirect to admin dashboard
@@ -60,8 +59,7 @@ const AdminLogin = () => {
               onChange={handleChange}
               placeholder="Enter your admin ID"
               disabled={isLoading}
-              required
-            />
+              required/>
           </div>
           
           <div className="form-group">
@@ -74,15 +72,13 @@ const AdminLogin = () => {
               onChange={handleChange}
               placeholder="Enter your password"
               disabled={isLoading}
-              required
-            />
+              required/>
           </div>
           
           <button 
             type="submit" 
             className="login-button"
-            disabled={isLoading}
-          >
+            disabled={isLoading}>
             {isLoading ? 'Authenticating...' : 'Login to Dashboard'}
           </button>
         </form>
