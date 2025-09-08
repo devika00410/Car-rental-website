@@ -26,7 +26,7 @@ const UserDashboard = () => {
 
   const loadUserBookings = () => {
     try {
-      // Get bookings from localStorage or create sample data if none exists
+      // Get bookings from localStorage
       let bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
       
       // If no bookings exist, create sample data for demonstration
@@ -36,9 +36,11 @@ const UserDashboard = () => {
             id: 1,
             userId: user?.id || 'user123',
             userEmail: user?.email,
-            carName: 'Toyota Camry',
-            make: 'Toyota',
-            model: 'Camry',
+            car: {
+              name: 'Toyota Camry',
+              make: 'Toyota',
+              model: 'Camry',
+            },
             amount: 2500,
             pickupDate: '2024-01-15',
             returnDate: '2024-01-18',
@@ -49,9 +51,11 @@ const UserDashboard = () => {
             id: 2,
             userId: user?.id || 'user123',
             userEmail: user?.email,
-            carName: 'Honda Civic',
-            make: 'Honda',
-            model: 'Civic',
+            car: {
+              name: 'Honda Civic',
+              make: 'Honda',
+              model: 'Civic',
+            },
             amount: 2200,
             pickupDate: '2024-01-20',
             returnDate: '2024-01-22',
@@ -62,11 +66,15 @@ const UserDashboard = () => {
         localStorage.setItem('bookings', JSON.stringify(bookings));
       }
 
-      // Filter bookings for current user
-      const userBookings = bookings.filter(booking => 
-        booking.userId === (user?.id || 'user123') || 
-        booking.userEmail === user?.email
-      );
+      // Filter bookings for current user - improved matching logic
+      const userBookings = bookings.filter(booking => {
+        // Check multiple possible identifiers
+        const matchesUserId = booking.userId === user?.id;
+        const matchesUserEmail = booking.userEmail === user?.email;
+        const matchesFallbackId = booking.userId === (user?.id || 'user123');
+        
+        return matchesUserId || matchesUserEmail || matchesFallbackId;
+      });
       
       setUserBookings(userBookings);
     } catch (error) {
@@ -115,9 +123,13 @@ const UserDashboard = () => {
     return <span className={`status-badge ${config.class}`}>{config.text}</span>;
   };
 
-  // Debug info - remove in production
-  console.log('Current user:', user);
-  console.log('User bookings:', userBookings);
+  // Function to get car name with fallback
+  const getCarName = (booking) => {
+    if (booking.carName) return booking.carName;
+    if (booking.car && booking.car.name) return booking.car.name;
+    if (booking.make && booking.model) return `${booking.make} ${booking.model}`;
+    return 'Unknown Car';
+  };
 
   return (
     <div className="user-dashboard">
@@ -125,7 +137,7 @@ const UserDashboard = () => {
       <header className="user-header">
         <div className="user-header-content">
           <div className="user-welcome-section">
-            <h1>Welcome back, {user?.username || user?.email || 'Valued Customer'}! 👋</h1>
+            <h1>Welcome back, {user?.username || user?.email || 'Valued Customer'}!</h1>
             <p>Here's your booking overview and recent activity</p>
           </div>
           <button onClick={handleNewBooking} className="new-booking-btn">
@@ -138,7 +150,7 @@ const UserDashboard = () => {
       {/* Stats Cards */}
       <div className="user-stats-grid">
         <div className="user-stat-card">
-          <div className="stat-icon-wrapper bg-blue">
+          <div className="stat-icon-wrapper">
             <CalendarIcon className="stat-icon" />
           </div>
           <div className="stat-content">
@@ -148,7 +160,7 @@ const UserDashboard = () => {
         </div>
 
         <div className="user-stat-card">
-          <div className="stat-icon-wrapper bg-green">
+          <div className="stat-icon-wrapper">
             <TruckIcon className="stat-icon" />
           </div>
           <div className="stat-content">
@@ -158,7 +170,7 @@ const UserDashboard = () => {
         </div>
 
         <div className="user-stat-card">
-          <div className="stat-icon-wrapper bg-purple">
+          <div className="stat-icon-wrapper">
             <CreditCardIcon className="stat-icon" />
           </div>
           <div className="stat-content">
@@ -168,7 +180,7 @@ const UserDashboard = () => {
         </div>
 
         <div className="user-stat-card">
-          <div className="stat-icon-wrapper bg-orange">
+          <div className="stat-icon-wrapper">
             <StarIcon className="stat-icon" />
           </div>
           <div className="stat-content">
@@ -217,7 +229,7 @@ const UserDashboard = () => {
                       <TruckIcon />
                     </div>
                     <div className="booking-details">
-                      <h3>{booking.carName || `${booking.make} ${booking.model}`}</h3>
+                      <h3>{getCarName(booking)}</h3>
                       <div className="booking-meta">
                         <span className="booking-date">
                           <CalendarIcon />
