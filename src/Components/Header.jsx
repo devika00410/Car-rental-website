@@ -8,8 +8,6 @@ function Header() {
             <h3 className=' text-white text-xl'>NexaGo</h3>
             {user && (
         <div>
-          <span>Hello, {user.name}</span>
-          <button onClick={logout}>Logout</button>
         </div>
       )}
 

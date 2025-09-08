@@ -1,0 +1,1384 @@
+{
+  "rentalCars": [
+    {
+      "id": 1,
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2023,
+      "type": "Economy",
+      "pricePerDay": 2200,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-AB-1234",
+      "image": "https://d3s8goeblmpptu.cloudfront.net/mrp/toyota/2023/corolla/2023-toyota-corolla_landing-2.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Silver",
+      "features": ["AC", "Bluetooth", "Power Windows", "Rear Camera", "Apple CarPlay", "Cruise Control"],
+      "rating": 4.6,
+      "stars": "★★★★☆",
+      "totalReviews": 92,
+      "totalRentals": 150,
+      "description": "The reliable Toyota Corolla is perfect for navigating Kochi's busy streets and weekend trips across Kerala. With excellent fuel efficiency and comfortable seating, it's ideal for family trips to attractions like Athirapally Falls or the backwaters of Alleppey. Features smooth automatic transmission and advanced safety systems for worry-free driving on both city roads and highways.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Rajesh Kumar",
+          "date": "2023-11-15",
+          "rating": 5,
+          "comment": "Excellent car for family trips. Very fuel efficient and comfortable for long drives to Munnar."
+        },
+        {
+          "id": 2,
+          "name": "Priya S",
+          "date": "2023-10-28",
+          "rating": 4,
+          "comment": "Good condition and reliable. The AC was very effective in Kerala's heat."
+        },
+        {
+          "id": 3,
+          "name": "Vikram Menon",
+          "date": "2023-11-03",
+          "rating": 4.5,
+          "comment": "Smooth driving experience. Perfect for city commuting and occasional highway trips."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2023,
+      "type": "Economy",
+      "pricePerDay": 2400,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-CD-5678",
+      "image": "https://lp-auto-assets.s3.amazonaws.com/23/honda/civic/sedan/M3/header.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Gray",
+      "exteriorColor": "Red",
+      "features": ["AC", "Bluetooth", "Sunroof", "Rear Camera", "Android Auto", "Push Button Start"],
+      "rating": 4.7,
+      "stars": "★★★★☆",
+      "totalReviews": 115,
+      "totalRentals": 180,
+      "description": "The sporty Honda Civic offers a perfect blend of style and performance for exploring Kerala. With its responsive handling and modern features, it's excellent for trips to hill stations like Munnar or coastal drives to Cherai Beach. The spacious cabin and premium interior make it ideal for comfortable journeys, while the advanced infotainment system keeps everyone entertained during travel.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Anjali Nair",
+          "date": "2023-11-18",
+          "rating": 5,
+          "comment": "Loved the sunroof! Made our drive through Wayanad absolutely breathtaking."
+        },
+        {
+          "id": 2,
+          "name": "Suresh P",
+          "date": "2023-10-22",
+          "rating": 4.5,
+          "comment": "Comfortable seats and great audio system. The red color looks stunning."
+        },
+        {
+          "id": 3,
+          "name": "Meera Krishnan",
+          "date": "2023-11-05",
+          "rating": 4,
+          "comment": "Good performance but fuel economy could be better in city traffic."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": 2023,
+      "type": "Economy",
+      "pricePerDay": 2300,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-EF-9012",
+      "image": "https://ksa.ellamotors.com/_next/image?url=https%3A%2F%2Fuae.ellamotors.com%2Fapi%2Fimages%3Fkey%3Dnew-cars%2Fhyundai%2Felantra%2Fgenerations%2FpG43Yy-mylGhP-OaVns8I7KML0fYr2vpvWPgMOIUujg%2Fhyundai-elantra-cover-FRONT-LEFT-ANGLE.webp&w=3840&q=75",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Beige",
+      "exteriorColor": "Phantom Black",
+      "features": ["AC", "Sunroof", "Touchscreen", "Rear Camera", "Wireless Charging", "Ventilated Seats"],
+      "rating": 4.2,
+      "stars": "★★★★☆",
+      "totalReviews": 78,
+      "totalRentals": 125,
+      "description": "The Hyundai Elantra combines sleek design with modern technology, making it perfect for exploring God's Own Country. With its comfortable ride and fuel-efficient engine, it's ideal for trips to Fort Kochi or journeys to nearby hill stations. The spacious interior and advanced features ensure a pleasant driving experience whether navigating city traffic or cruising on highways.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Arun Jacob",
+          "date": "2023-11-12",
+          "rating": 4,
+          "comment": "Ventilated seats were a blessing in Kerala's humidity. Comfortable for long drives."
+        },
+        {
+          "id": 2,
+          "name": "Lakshmi P",
+          "date": "2023-10-30",
+          "rating": 4.5,
+          "comment": "Loved the modern features and smooth handling. Perfect for our family vacation."
+        },
+        {
+          "id": 3,
+          "name": "Deepak R",
+          "date": "2023-11-08",
+          "rating": 4,
+          "comment": "Good car overall but the boot space is slightly less than expected."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "make": "Nissan",
+      "model": "Sentra",
+      "year": 2023,
+      "type": "Economy",
+      "pricePerDay": 2100,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-GH-3456",
+      "image": "https://images.dealer.com/autodata/us/color/2023/USD30NIC041B0/NBL.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Scarlet Ember",
+      "features": ["AC", "Bluetooth", "Power Windows", "Rear Camera", "Apple CarPlay", "Safety Shield"],
+      "rating": 4.1,
+      "stars": "★★★★☆",
+      "totalReviews": 65,
+      "totalRentals": 110,
+      "description": "The Nissan Sentra offers a comfortable and efficient driving experience for exploring Kerala's diverse landscapes. With its refined interior and smooth ride quality, it's perfect for trips to backwater destinations or city exploration in Kochi. The advanced safety features provide peace of mind on winding hill roads, while the fuel-efficient engine makes it economical for long journeys.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Santhosh K",
+          "date": "2023-11-14",
+          "rating": 4,
+          "comment": "Comfortable ride quality and good fuel economy. Perfect for highway drives."
+        },
+        {
+          "id": 2,
+          "name": "Neethu M",
+          "date": "2023-10-25",
+          "rating": 4,
+          "comment": "The safety features are impressive. Felt secure driving on hilly roads to Munnar."
+        },
+        {
+          "id": 3,
+          "name": "Rahul Varma",
+          "date": "2023-11-02",
+          "rating": 4.5,
+          "comment": "Smooth transmission and comfortable seats. The scarlet color looks premium."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "make": "Kia",
+      "model": "Forte",
+      "year": 2023,
+      "type": "Economy",
+      "pricePerDay": 2000,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-IJ-7890",
+      "image": "https://media.motorfuse.com/img.cfm/type/3/img/0F16CD4A4F07D8D4C6E6AFC1C0290910F5CB41",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Curiosity Red",
+      "features": ["AC", "Touchscreen", "Android Auto", "Rear Camera", "Steering Controls", "Cruise Control"],
+      "rating": 3.9,
+      "stars": "★★★☆☆",
+      "totalReviews": 58,
+      "totalRentals": 95,
+      "description": "The Kia Forte offers great value with its stylish design and comprehensive features. Perfect for navigating Ernakulam's streets and weekend getaways to destinations like Vypin Island or Cherai Beach. With its fuel-efficient engine and comfortable interior, it's an economical choice for exploring Kerala's attractions without compromising on modern amenities and driving comfort.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Vishnu Prasad",
+          "date": "2023-11-10",
+          "rating": 4,
+          "comment": "Good value for money. The red color is eye-catching and the features are decent."
+        },
+        {
+          "id": 2,
+          "name": "Anitha S",
+          "date": "2023-10-28",
+          "rating": 3.5,
+          "comment": "Comfortable but the engine feels underpowered on uphill roads to hill stations."
+        },
+        {
+          "id": 3,
+          "name": "Manoj K",
+          "date": "2023-11-05",
+          "rating": 4,
+          "comment": "Economical choice for city driving. The infotainment system is user-friendly."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "make": "Mazda",
+      "model": "3",
+      "year": 2023,
+      "type": "Economy",
+      "pricePerDay": 2500,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-KL-1357",
+      "image": "https://pictures.dealer.com/r/rickcasemazda/1316/f3ad4456c4aa4ce0040ec353548cc747x.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Soul Red Crystal",
+      "features": ["AC", "Premium Audio", "Heads-Up Display", "Rear Camera", "Leather Seats", "Sunroof"],
+      "rating": 4.5,
+      "stars": "★★★★☆",
+      "totalReviews": 84,
+      "totalRentals": 130,
+      "description": "The Mazda 3 combines premium feel with sporty handling, making it perfect for those who enjoy driving while exploring Kerala. With its upscale interior and responsive performance, it's great for trips to hill stations or coastal drives. The refined ride quality and advanced technology features ensure a enjoyable journey whether navigating city traffic or enjoying scenic routes.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Nikhil Thomas",
+          "date": "2023-11-16",
+          "rating": 4.5,
+          "comment": "Sporty handling and premium interior. The heads-up display is a fantastic feature."
+        },
+        {
+          "id": 2,
+          "name": "Divya R",
+          "date": "2023-10-24",
+          "rating": 4.5,
+          "comment": "Loved the audio quality and comfortable leather seats. Perfect for long drives."
+        },
+        {
+          "id": 3,
+          "name": "Ajith Kumar",
+          "date": "2023-11-07",
+          "rating": 4.5,
+          "comment": "The soul red color is stunning. Enjoyed every moment driving this beautiful car."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "year": 2023,
+      "type": "Economy",
+      "pricePerDay": 2600,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-MN-2468",
+      "image": "https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/f2acd32538fd950f45033f2020f43e44e93f4359/photos/rNYBG7oW-dTvbWTaEIn/edit/Yamlf.jpg?t=174162895328",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Titan Black",
+      "exteriorColor": "Pure White",
+      "features": ["AC", "Digital Cockpit", "App Connect", "Rear Camera", "Leather Seats", "Sunroof"],
+      "rating": 4.3,
+      "stars": "★★★★☆",
+      "totalReviews": 72,
+      "totalRentals": 115,
+      "description": "The Volkswagen Jetta offers European refinement and solid build quality for exploring Kerala in comfort. With its confident highway manners and precise handling, it's perfect for trips to destinations like Munnar or Thekkady. The spacious interior and premium features ensure a comfortable journey, while the efficient engine provides good fuel economy for longer trips.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "George Mathew",
+          "date": "2023-11-13",
+          "rating": 4.5,
+          "comment": "Solid German engineering. Felt very stable on highways and winding hill roads."
+        },
+        {
+          "id": 2,
+          "name": "Sara Johnson",
+          "date": "2023-10-29",
+          "rating": 4,
+          "comment": "Comfortable and spacious. The digital cockpit is modern and easy to use."
+        },
+        {
+          "id": 3,
+          "name": "Praveen R",
+          "date": "2023-11-04",
+          "rating": 4.5,
+          "comment": "Excellent build quality. The pure white color looks elegant and premium."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "year": 2023,
+      "type": "Economy",
+      "pricePerDay": 2400,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-OP-8024",
+      "image": "https://dealerimages.dealereprocess.com/image/upload/2948832",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Jet Black",
+      "exteriorColor": "Midnight Blue",
+      "features": ["AC", "WiFi Hotspot", "Rear Camera", "Leather Seats", "Heated Seats", "Remote Start"],
+      "rating": 3.8,
+      "stars": "★★★☆☆",
+      "totalReviews": 63,
+      "totalRentals": 100,
+      "description": "The Chevrolet Malibu offers spacious comfort and modern features for exploring Kerala's diverse destinations. With its smooth ride and quiet cabin, it's perfect for relaxed journeys to backwaters or hill stations. The generous legroom and trunk space make it ideal for family vacations, while the advanced connectivity features keep everyone entertained during the trip.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Rahul Nair",
+          "date": "2023-11-11",
+          "rating": 4,
+          "comment": "Spacious and comfortable. The WiFi hotspot was useful for navigation."
+        },
+        {
+          "id": 2,
+          "name": "Latha M",
+          "date": "2023-10-26",
+          "rating": 3.5,
+          "comment": "Smooth ride but fuel consumption is higher than expected in city traffic."
+        },
+        {
+          "id": 3,
+          "name": "Siddharth P",
+          "date": "2023-11-06",
+          "rating": 4,
+          "comment": "Comfortable seats and good legroom. The midnight blue color looks elegant."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "make": "Honda",
+      "model": "CR-V",
+      "year": 2023,
+      "type": "SUV",
+      "pricePerDay": 3800,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-QR-6633",
+      "image": "https://www.rushlane.com/wp-content/uploads/2022/05/2023-honda-crv-suv-india-launch-price-specs-1-768x432.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Gray",
+      "exteriorColor": "Obsidian Blue",
+      "features": ["AC", "Power Tailgate", "Rear Camera", "Apple CarPlay", "Honda Sensing", "Sunroof"],
+      "rating": 4.7,
+      "stars": "★★★★☆",
+      "totalReviews": 105,
+      "totalRentals": 160,
+      "description": "The Honda CR-V is the perfect SUV for exploring Kerala's diverse terrain with confidence and comfort. With its spacious interior and versatile cargo space, it's ideal for family trips to hill stations or beach destinations. The advanced safety features and all-wheel drive capability provide security on winding roads, while the comfortable ride ensures enjoyment throughout your journey.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Anil Kumar",
+          "date": "2023-11-17",
+          "rating": 5,
+          "comment": "Perfect family SUV. The Honda Sensing safety features are excellent for hilly terrain."
+        },
+        {
+          "id": 2,
+          "name": "Smitha R",
+          "date": "2023-10-23",
+          "rating": 4.5,
+          "comment": "Spacious and comfortable. The power tailgate is very convenient for loading luggage."
+        },
+        {
+          "id": 3,
+          "name": "Vijay S",
+          "date": "2023-11-09",
+          "rating": 4.5,
+          "comment": "Smooth ride and good visibility. Handled both city and hill roads with ease."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2023,
+      "type": "SUV",
+      "pricePerDay": 3700,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-ST-9751",
+      "image": "https://www.atocars.com/storage/uploads/175231/2023-toyota-rav4-adventure-2-5l-petrol-at-lunar-rock-1698761928.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Lunar Rock",
+      "features": ["AC", "Power Liftgate", "Rear Camera", "Apple CarPlay", "Toyota Safety Sense", "Moonroof"],
+      "rating": 4.6,
+      "stars": "★★★★☆",
+      "totalReviews": 120,
+      "totalRentals": 185,
+      "description": "The Toyota RAV4 combines rugged capability with modern comfort, making it perfect for exploring both Kochi city and Kerala's natural attractions. With its reliable performance and advanced safety systems, it's ideal for trips to destinations like Athirapally Falls or Wayanad. The versatile interior and ample cargo space accommodate both passengers and luggage comfortably.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Rajiv Menon",
+          "date": "2023-11-19",
+          "rating": 5,
+          "comment": "Reliable and capable SUV. The lunar rock color gets many compliments."
+        },
+        {
+          "id": 2,
+          "name": "Sneha P",
+          "date": "2023-10-21",
+          "rating": 4.5,
+          "comment": "Excellent safety features and comfortable ride. Perfect for family trips."
+        },
+        {
+          "id": 3,
+          "name": "Arjun K",
+          "date": "2023-11-01",
+          "rating": 4.5,
+          "comment": "Good fuel economy for an SUV. The power liftgate is very convenient."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "make": "Ford",
+      "model": "Explorer",
+      "year": 2023,
+      "type": "SUV",
+      "pricePerDay": 4500,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-UV-1122",
+      "image": "https://content.homenetiol.com/2000292/2143540/0x0/5a1e91dd5e1b471dbc1b8f95d6ede3a4.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 7,
+      "interiorColor": "Ebony",
+      "exteriorColor": "Agate Black",
+      "features": ["AC", "SYNC 4", "Rear Camera", "Apple CarPlay", "Power Fold Seats", "Panoramic Roof"],
+      "rating": 4.4,
+      "stars": "★★★★☆",
+      "totalReviews": 88,
+      "totalRentals": 135,
+      "description": "The Ford Explorer offers spacious three-row seating and powerful performance for larger groups exploring Kerala together. With its commanding view of the road and capable handling, it's perfect for family vacations to destinations like Munnar or Thekkady. The advanced technology features and comfortable interior ensure an enjoyable journey for all passengers.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Mohammed Asif",
+          "date": "2023-11-15",
+          "rating": 4.5,
+          "comment": "Spacious enough for our family of 6. The panoramic roof is amazing for sightseeing."
+        },
+        {
+          "id": 2,
+          "name": "Priya R",
+          "date": "2023-10-27",
+          "rating": 4,
+          "comment": "Powerful engine but fuel consumption is high. Comfortable for long journeys."
+        },
+        {
+          "id": 3,
+          "name": "Vishal G",
+          "date": "2023-11-03",
+          "rating": 4.5,
+          "comment": "The SYNC 4 system is intuitive and responsive. Great for family vacations."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": 2023,
+      "type": "SUV",
+      "pricePerDay": 3600,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-WX-3344",
+      "image": "https://content.homenetiol.com/640x480/b2532de16328476e8463573b3a9d5355.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Gray",
+      "exteriorColor": "Gun Metallic",
+      "features": ["AC", "ProPILOT Assist", "Rear Camera", "Apple CarPlay", "Motion-Activated Liftgate", "Sunroof"],
+      "rating": 4.2,
+      "stars": "★★★★☆",
+      "totalReviews": 79,
+      "totalRentals": 125,
+      "description": "The Nissan Rogue offers a comfortable and efficient SUV experience for exploring Kerala's diverse landscapes. With its advanced driver assistance features and spacious interior, it's perfect for family trips to backwaters or hill stations. The fuel-efficient engine and smooth ride quality make it ideal for both city driving and longer journeys across the state.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Anoop S",
+          "date": "2023-11-12",
+          "rating": 4,
+          "comment": "ProPILOT assist is helpful on highways. Comfortable ride quality."
+        },
+        {
+          "id": 2,
+          "name": "Lakshmi R",
+          "date": "2023-10-30",
+          "rating": 4.5,
+          "comment": "Spacious interior and good fuel economy. The motion-activated liftgate is convenient."
+        },
+        {
+          "id": 3,
+          "name": "Ramesh P",
+          "date": "2023-11-08",
+          "rating": 4,
+          "comment": "Smooth transmission and comfortable seats. Good value for an SUV."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "year": 2023,
+      "type": "SUV",
+      "pricePerDay": 3500,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-YZ-5566",
+      "image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/Tucson/10133/1739942145732/exterior-image-165.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Amazon Gray",
+      "features": ["AC", "Digital Cluster", "Rear Camera", "Apple CarPlay", "Ventilated Seats", "Panoramic Sunroof"],
+      "rating": 4.5,
+      "stars": "★★★★☆",
+      "totalReviews": 95,
+      "totalRentals": 145,
+      "description": "The Hyundai Tucson combines bold design with advanced technology for a modern SUV experience in Kerala. With its spacious and tech-filled interior, it's perfect for exploring both urban Kochi and natural destinations. The comfortable ride and efficient performance make it ideal for family vacations, while the premium features ensure an enjoyable journey for all occupants.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Suresh Kumar",
+          "date": "2023-11-14",
+          "rating": 4.5,
+          "comment": "Modern design and great features. The panoramic sunroof is perfect for Kerala's scenery."
+        },
+        {
+          "id": 2,
+          "name": "Meena L",
+          "date": "2023-10-25",
+          "rating": 4.5,
+          "comment": "Ventilated seats were amazing in the humid weather. Very comfortable for long drives."
+        },
+        {
+          "id": 3,
+          "name": "Gopal R",
+          "date": "2023-11-02",
+          "rating": 4.5,
+          "comment": "The digital cluster is futuristic and useful. Smooth ride on both city and hill roads."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "make": "Kia",
+      "model": "Sportage",
+      "year": 2023,
+      "type": "SUV",
+      "pricePerDay": 3400,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-AA-7788",
+      "image": "https://static1.topspeedimages.com/wordpress/wp-content/uploads/jpg/202208/2023-2023-kia-sportage-sx-23.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Gravity Gray",
+      "features": ["AC", "Dual Screen Display", "Rear Camera", "Apple CarPlay", "Heated Seats", "Sunroof"],
+      "rating": 4.1,
+      "stars": "★★★★☆",
+      "totalReviews": 82,
+      "totalRentals": 130,
+      "description": "The Kia Sportage offers stylish design and practical features for exploring Kerala's diverse destinations. With its comfortable interior and capable performance, it's perfect for family trips to hill stations or beach destinations. The user-friendly technology and safety features provide confidence on various road conditions, from city streets to countryside routes.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Vinod P",
+          "date": "2023-11-10",
+          "rating": 4,
+          "comment": "Good looking SUV with practical features. The dual screen display is impressive."
+        },
+        {
+          "id": 2,
+          "name": "Sarika M",
+          "date": "2023-10-28",
+          "rating": 4,
+          "comment": "Comfortable ride but the rear visibility could be better. Good value for money."
+        },
+        {
+          "id": 3,
+          "name": "Rahul S",
+          "date": "2023-11-05",
+          "rating": 4.5,
+          "comment": "Stylish design and good features. The gravity gray color looks premium."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "make": "Subaru",
+      "model": "Forester",
+      "year": 2023,
+      "type": "SUV",
+      "pricePerDay": 3900,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-BB-9900",
+      "image": "https://media.drive.com.au/obj/tx_q:70,rs:auto:960:540:1/driveau/upload/vehicles/used/subaru/forester/2023/8022828c-7190-5575-bfe3-18780d850000",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Crystal White Pearl",
+      "features": ["AC", "EyeSight Safety", "Rear Camera", "Apple CarPlay", "All-Wheel Drive", "X-Mode"],
+      "rating": 4.7,
+      "stars": "★★★★☆",
+      "totalReviews": 110,
+      "totalRentals": 165,
+      "description": "The Subaru Forester with its standard all-wheel drive is perfect for exploring Kerala's varied terrain, including monsoon roads and hill station routes. With its excellent visibility and capable handling, it's ideal for trips to destinations like Munnar or Wayanad. The spacious interior and practical features make it a great choice for adventurous families exploring nature.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Aditya N",
+          "date": "2023-11-16",
+          "rating": 5,
+          "comment": "All-wheel drive performed excellently on wet roads. Very confident in monsoon conditions."
+        },
+        {
+          "id": 2,
+          "name": "Nandini R",
+          "date": "2023-10-24",
+          "rating": 4.5,
+          "comment": "Excellent visibility and safety features. Perfect for family trips to hill stations."
+        },
+        {
+          "id": 3,
+          "name": "Prakash K",
+          "date": "2023-11-07",
+          "rating": 4.5,
+          "comment": "Spacious interior and practical features. The X-Mode is great for challenging terrain."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "year": 2023,
+      "type": "SUV",
+      "pricePerDay": 5200,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-CC-1122",
+      "image": "https://vehicle-images.dealerinspire.com/14c0-110010487/1C4RJYB68PC665029/76fbcb313dc84f3ea6a9a94e2c1cfd98.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Bright White",
+      "features": ["AC", "Uconnect System", "Rear Camera", "Apple CarPlay", "Quadra-Trac", "Panoramic Sunroof"],
+      "rating": 4.6,
+      "stars": "★★★★☆",
+      "totalReviews": 75,
+      "totalRentals": 110,
+      "description": "The Jeep Grand Cherokee offers premium capability and comfort for exploring Kerala's most challenging destinations. With its sophisticated four-wheel drive system and luxurious interior, it's perfect for trips to remote areas or hill stations. The powerful performance and advanced features ensure a comfortable and confident journey regardless of road conditions.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Rohit Sharma",
+          "date": "2023-11-13",
+          "rating": 4.5,
+          "comment": "Powerful and capable SUV. Handled rough roads to Wayanad with ease."
+        },
+        {
+          "id": 2,
+          "name": "Ananya P",
+          "date": "2023-10-29",
+          "rating": 4.5,
+          "comment": "Luxurious interior and smooth ride. The panoramic sunroof is fantastic."
+        },
+        {
+          "id": 3,
+          "name": "Kiran R",
+          "date": "2023-11-04",
+          "rating": 4.5,
+          "comment": "Excellent off-road capability combined with premium comfort. Worth the price."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "make": "BMW",
+      "model": "5 Series",
+      "year": 2023,
+      "type": "Luxury",
+      "pricePerDay": 8500,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-DD-3344",
+      "image": "https://mediapool.bmwgroup.com/cache/P9/202010/P90404074/P90404074-the-new-bmw-540i-xdrive-sedan-phytonic-blue-metallic-10-2020-600px.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Cognac",
+      "exteriorColor": "Phytonic Blue",
+      "features": ["AC", "iDrive System", "360 Camera", "Apple CarPlay", "Leather Seats", "Panoramic Sunroof", "Heads-Up Display"],
+      "rating": 4.8,
+      "stars": "★★★★☆",
+      "totalReviews": 65,
+      "totalRentals": 90,
+      "description": "The BMW 5 Series offers ultimate driving pleasure and luxury for exploring Kerala in style. With its precise handling and powerful performance, it's perfect for scenic drives to hill stations or coastal roads. The premium interior and advanced technology provide a first-class travel experience, making every journey memorable whether for business or leisure.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Aravind Nair",
+          "date": "2023-11-18",
+          "rating": 5,
+          "comment": "Ultimate driving machine! The handling on winding hill roads is exceptional."
+        },
+        {
+          "id": 2,
+          "name": "Sonia M",
+          "date": "2023-10-22",
+          "rating": 4.5,
+          "comment": "Luxurious interior and advanced features. The heads-up display is very useful."
+        },
+        {
+          "id": 3,
+          "name": "Vikram J",
+          "date": "2023-11-09",
+          "rating": 5,
+          "comment": "Perfect blend of performance and luxury. Made our anniversary trip special."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "year": 2023,
+      "type": "Luxury",
+      "pricePerDay": 8800,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-EE-5566",
+      "image": "https://vehicle-images.dealerinspire.com/4f68-11001138/W1KLF4HB6RA066204/b5b347f7e2cf4ea4de9b7671369620f0.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Obsidian Black",
+      "features": ["AC", "MBUX System", "360 Camera", "Apple CarPlay", "Leather Seats", "Panoramic Sunroof", "Ambient Lighting"],
+      "rating": 4.9,
+      "stars": "★★★★★",
+      "totalReviews": 70,
+      "totalRentals": 95,
+      "description": "The Mercedes-Benz E-Class combines sophisticated luxury with advanced technology for an unparalleled driving experience in Kerala. With its comfortable ride and elegant interior, it's perfect for special occasions or business travel. The comprehensive safety features and driver assistance systems ensure a relaxed and secure journey throughout your exploration of God's Own Country.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Rahul Khanna",
+          "date": "2023-11-17",
+          "rating": 5,
+          "comment": "Pure luxury and comfort. The MBUX system is incredibly intuitive and advanced."
+        },
+        {
+          "id": 2,
+          "name": "Neha S",
+          "date": "2023-10-23",
+          "rating": 5,
+          "comment": "Perfect for our wedding anniversary. The ambient lighting creates a magical atmosphere."
+        },
+        {
+          "id": 3,
+          "name": "Arvind P",
+          "date": "2023-11-01",
+          "rating": 4.5,
+          "comment": "Superb ride quality and premium features. The obsidian black looks majestic."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "make": "Audi",
+      "model": "A6",
+      "year": 2023,
+      "type": "Luxury",
+      "pricePerDay": 8600,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-FF-7788",
+      "image": "https://preview.redd.it/love-how-different-audi-daytona-gray-looks-in-different-v0-ncjsucxthxoa1.jpg?width=640&crop=smart&auto=webp&s=e0ce511625b3f4be1d6ce2bc90e179aa6491e6a6",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Daytona Gray",
+      "features": ["AC", "Virtual Cockpit", "360 Camera", "Apple CarPlay", "Leather Seats", "Panoramic Sunroof", "Quattro AWD"],
+      "rating": 4.7,
+      "stars": "★★★★☆",
+      "totalReviews": 60,
+      "totalRentals": 85,
+      "description": "The Audi A6 offers sophisticated design and innovative technology for exploring Kerala with premium comfort. With its quattro all-wheel drive and responsive handling, it's perfect for varied road conditions from city streets to hill station routes. The luxurious interior and advanced infotainment system ensure a first-class travel experience for both driver and passengers.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Sanjay M",
+          "date": "2023-11-15",
+          "rating": 4.5,
+          "comment": "The virtual cockpit is amazing technology. Quattro AWD provides excellent grip on wet roads."
+        },
+        {
+          "id": 2,
+          "name": "Divya N",
+          "date": "2023-10-27",
+          "rating": 5,
+          "comment": "Elegant design and premium comfort. Perfect for business meetings and leisure trips."
+        },
+        {
+          "id": 3,
+          "name": "Karthik R",
+          "date": "2023-11-03",
+          "rating": 4.5,
+          "comment": "Sophisticated and powerful. The daytona gray color looks stunning in sunlight."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "make": "Lexus",
+      "model": "ES",
+      "year": 2023,
+      "type": "Luxury",
+      "pricePerDay": 8200,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-GG-9900",
+      "image": "https://img2.carmax.com/assets/27629514/hero.jpg?width=400&height=300",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Palomino",
+      "exteriorColor": "Ultra White",
+      "features": ["AC", "Lexus Interface", "360 Camera", "Apple CarPlay", "Semi-Aniline Leather", "Panoramic Sunroof", "Mark Levinson Audio"],
+      "rating": 4.8,
+      "stars": "★★★★☆",
+      "totalReviews": 68,
+      "totalRentals": 92,
+      "description": "The Lexus ES combines serene comfort with refined performance for a tranquil journey through Kerala's landscapes. With its whisper-quiet cabin and smooth ride quality, it's perfect for relaxed travel to destinations like backwaters or heritage sites. The exceptional build quality and attention to detail ensure a premium experience that complements Kerala's natural beauty.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Anand R",
+          "date": "2023-11-14",
+          "rating": 5,
+          "comment": "Unmatched comfort and silence. The Mark Levinson audio system is incredible."
+        },
+        {
+          "id": 2,
+          "name": "Lakshmi P",
+          "date": "2023-10-30",
+          "rating": 4.5,
+          "comment": "Ultra smooth ride quality. Perfect for relaxed journeys through Kerala's backwaters."
+        },
+        {
+          "id": 3,
+          "name": "Mohan K",
+          "date": "2023-11-08",
+          "rating": 5,
+          "comment": "Exceptional build quality and attention to detail. The ultra white color looks pristine."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2023,
+      "type": "Luxury",
+      "pricePerDay": 7800,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-HH-1122",
+      "image": "https://s3.eu-north-1.amazonaws.com/assets.boosted.dk/2022/01/22134114/tesla-model-3-nardo-gray-2.jpeg",
+      "fuelType": "Electric",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Midnight Silver",
+      "features": ["AC", "Autopilot", "360 Camera", "Touchscreen Display", "Glass Roof", "Supercharging Capable"],
+      "rating": 4.5,
+      "stars": "★★★★☆",
+      "totalReviews": 85,
+      "totalRentals": 120,
+      "description": "The Tesla Model 3 offers a revolutionary electric driving experience for exploring Kerala sustainably. With its instant acceleration and advanced autopilot features, it's perfect for modern travelers seeking innovation. The minimalist interior and cutting-edge technology provide a unique journey, while the electric powertrain allows silent operation through Kerala's natural landscapes.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Nikhil S",
+          "date": "2023-11-16",
+          "rating": 4.5,
+          "comment": "Futuristic driving experience. The instant acceleration is thrilling on open roads."
+        },
+        {
+          "id": 2,
+          "name": "Aisha R",
+          "date": "2023-10-24",
+          "rating": 4,
+          "comment": "Silent operation is perfect for nature trips. Charging infrastructure is improving in Kerala."
+        },
+        {
+          "id": 3,
+          "name": "Rahul V",
+          "date": "2023-11-07",
+          "rating": 4.5,
+          "comment": "Autopilot makes highway driving relaxing. The glass roof offers amazing views."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "make": "Cadillac",
+      "model": "CT5",
+      "year": 2023,
+      "type": "Luxury",
+      "pricePerDay": 8000,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-II-3344",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/2020-cadillac-ct5-v-101-1584446684.jpg?crop=0.816xw:0.689xh;0.142xw,0.183xh&resize=1200:*",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Jet Black",
+      "exteriorColor": "Radiant Red",
+      "features": ["AC", "Super Cruise", "360 Camera", "Apple CarPlay", "Leather Seats", "Panoramic Sunroof", "AKG Audio"],
+      "rating": 4.4,
+      "stars": "★★★★☆",
+      "totalReviews": 55,
+      "totalRentals": 75,
+      "description": "The Cadillac CT5 offers American luxury with advanced technology for a distinctive journey through Kerala. With its Super Cruise driver assistance and powerful performance, it's perfect for comfortable long-distance travel. The bold design and premium features provide a unique luxury experience that stands out while exploring Kerala's diverse destinations.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Vijay Thomas",
+          "date": "2023-11-12",
+          "rating": 4.5,
+          "comment": "Super Cruise is amazing on highways. The radiant red color turns heads everywhere."
+        },
+        {
+          "id": 2,
+          "name": "Sonia R",
+          "date": "2023-10-26",
+          "rating": 4,
+          "comment": "Powerful performance but fuel economy could be better. The AKG audio is exceptional."
+        },
+        {
+          "id": 3,
+          "name": "Arun K",
+          "date": "2023-11-02",
+          "rating": 4.5,
+          "comment": "Distinctive American luxury. Comfortable for long drives with advanced safety features."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2023,
+      "type": "Truck",
+      "pricePerDay": 5500,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-JJ-5566",
+      "image": "https://vehicle-images.dealerinspire.com/32bc-110013063/1FTFW1E50PFB13988/68f74aa39d03be3ae03ccbb9c739142b.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Black",
+      "exteriorColor": "Oxford White",
+      "features": ["AC", "SYNC 4", "Rear Camera", "Apple CarPlay", "Power Windows", "Towing Package"],
+      "rating": 4.3,
+      "stars": "★★★★☆",
+      "totalReviews": 45,
+      "totalRentals": 65,
+      "description": "The Ford F-150 offers powerful capability and practical utility for specialized needs in Kerala. With its robust towing capacity and spacious interior, it's perfect for projects, equipment transport, or adventurous trips requiring extra capability. The comfortable cabin and modern features make it suitable for both work and leisure activities across varied terrain.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Sreekumar P",
+          "date": "2023-11-10",
+          "rating": 4.5,
+          "comment": "Powerful and capable. Perfect for our construction material transport needs."
+        },
+        {
+          "id": 2,
+          "name": "Rajeev M",
+          "date": "2023-10-28",
+          "rating": 4,
+          "comment": "Spacious interior and modern features. The towing package is very useful."
+        },
+        {
+          "id": 3,
+          "name": "Binu C",
+          "date": "2023-11-05",
+          "rating": 4,
+          "comment": "Comfortable for a truck but parking can be challenging in narrow city streets."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "year": 2023,
+      "type": "Truck",
+      "pricePerDay": 5600,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-KK-7788",
+      "image": "https://editorial.pxcrush.net/carsales/general/editorial/2023-chevrolet-silverado-zr2-5546.jpg?width=1024&height=682",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "interiorColor": "Jet Black",
+      "exteriorColor": "Northsky Blue",
+      "features": ["AC", "Infotainment System", "Rear Camera", "Apple CarPlay", "Power Windows", "Towing Package"],
+      "rating": 4.2,
+      "stars": "★★★★☆",
+      "totalReviews": 40,
+      "totalRentals": 60,
+      "description": "The Chevrolet Silverado provides dependable capability and comfortable utility for specialized requirements in Kerala. With its strong performance and versatile bed options, it's ideal for construction projects, moving assistance, or outdoor adventures requiring equipment transport. The refined interior and technology features ensure comfort during both work and travel.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Prakash N",
+          "date": "2023-11-11",
+          "rating": 4,
+          "comment": "Reliable and powerful. Handled our equipment transport needs efficiently."
+        },
+        {
+          "id": 2,
+          "name": "Santhosh R",
+          "date": "2023-10-29",
+          "rating": 4.5,
+          "comment": "Comfortable cabin with modern features. The northsky blue color looks distinctive."
+        },
+        {
+          "id": 3,
+          "name": "Vipin M",
+          "date": "2023-11-06",
+          "rating": 4,
+          "comment": "Good towing capacity but fuel consumption is high. Practical for work purposes."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "make": "Toyota",
+      "model": "Sienna",
+      "year": 2023,
+      "type": "Van",
+      "pricePerDay": 4800,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-LL-9900",
+      "image": "https://content.homenetiol.com/640x480/2db10adccc4146c3ba9e8295ec6cb2f0.jpg",
+      "fuelType": "Hybrid",
+      "transmission": "Automatic",
+      "seats": 8,
+      "interiorColor": "Gray",
+      "exteriorColor": "Celestial Silver",
+      "features": ["AC", "Rear Entertainment", "Rear Camera", "Apple CarPlay", "Power Sliding Doors", "All-Wheel Drive"],
+      "rating": 4.6,
+      "stars": "★★★★☆",
+      "totalReviews": 70,
+      "totalRentals": 100,
+      "description": "The Toyota Sienna hybrid minivan offers spacious comfort and excellent fuel efficiency for large groups exploring Kerala. With its versatile seating and ample cargo space, it's perfect for family reunions, group tours, or transportation needs for special events. The smooth hybrid powertrain and comfortable ride ensure a pleasant journey for all passengers.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Thomas George",
+          "date": "2023-11-13",
+          "rating": 4.5,
+          "comment": "Perfect for our family of 7. Excellent fuel economy for a vehicle this size."
+        },
+        {
+          "id": 2,
+          "name": "Lissy M",
+          "date": "2023-10-27",
+          "rating": 4.5,
+          "comment": "The rear entertainment system kept children occupied during long drives. Very practical."
+        },
+        {
+          "id": 3,
+          "name": "Sunil P",
+          "date": "2023-11-04",
+          "rating": 4.5,
+          "comment": "Smooth hybrid powertrain and comfortable ride. Power sliding doors are very convenient."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "make": "Honda",
+      "model": "Odyssey",
+      "year": 2023,
+      "type": "Van",
+      "pricePerDay": 4700,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-MM-1122",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/2021_Honda_Odyssey_Absolute_e%E2%88%B6HEV_in_Platinum_White_Pearl%2C_front_left.jpg/1200px-2021_Honda_Odyssey_Absolute_e%E2%88%B6HEV_in_Platinum_White_Pearl%2C_front_left.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 8,
+      "interiorColor": "Gray",
+      "exteriorColor": "Platinum White",
+      "features": ["AC", "Magic Slide Seats", "Rear Camera", "Apple CarPlay", "Power Sliding Doors", "CabinWatch"],
+      "rating": 4.4,
+      "stars": "★★★★☆",
+      "totalReviews": 65,
+      "totalRentals": 95,
+      "description": "The Honda Odyssey provides versatile family transportation with innovative features for group travel in Kerala. With its flexible seating configurations and spacious interior, it's ideal for large families, airport transfers, or group excursions to popular destinations. The comfortable ride and practical features ensure a convenient and enjoyable experience for all occupants.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Rajesh P",
+          "date": "2023-11-12",
+          "rating": 4.5,
+          "comment": "Magic slide seats are incredibly versatile. Perfect for our large family trips."
+        },
+        {
+          "id": 2,
+          "name": "Anitha R",
+          "date": "2023-10-26",
+          "rating": 4,
+          "comment": "CabinWatch is great for monitoring children. Comfortable for long journeys."
+        },
+        {
+          "id": 3,
+          "name": "Manoj K",
+          "date": "2023-11-08",
+          "rating": 4.5,
+          "comment": "Spacious and practical. The platinum white color looks clean and elegant."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2023,
+      "type": "Sports",
+      "pricePerDay": 7200,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-NN-3344",
+      "image": "https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_ecoboost-premium_fq_oem_2_1600.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 4,
+      "interiorColor": "Black",
+      "exteriorColor": "Velocity Blue",
+      "features": ["AC", "SYNC 3", "Rear Camera", "Apple CarPlay", "Leather Seats", "Performance Package"],
+      "rating": 4.7,
+      "stars": "★★★★☆",
+      "totalReviews": 80,
+      "totalRentals": 110,
+      "description": "The Ford Mustang offers iconic American muscle car excitement for unforgettable drives through Kerala's scenic routes. With its powerful performance and aggressive styling, it's perfect for special occasions, romantic getaways, or simply enjoying the thrill of driving. The roaring engine and responsive handling make coastal drives and mountain roads truly memorable experiences.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Akhil Menon",
+          "date": "2023-11-17",
+          "rating": 5,
+          "comment": "An absolute thrill to drive! The exhaust note on coastal roads is incredible."
+        },
+        {
+          "id": 2,
+          "name": "Priya S",
+          "date": "2023-10-23",
+          "rating": 4.5,
+          "comment": "Perfect for our anniversary trip. The velocity blue color is stunning."
+        },
+        {
+          "id": 3,
+          "name": "Vishnu R",
+          "date": "2023-11-09",
+          "rating": 4.5,
+          "comment": "Powerful performance and head-turning design. Made our vacation unforgettable."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "year": 2023,
+      "type": "Sports",
+      "pricePerDay": 7100,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-OO-5566",
+      "image": "https://vehicle-images.dealerinspire.com/ef5c-110005755/thumbnails/large/1G1FF1R72P0159278/1db4a4e46b7357aa3ea9ee6e4941734a.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 4,
+      "interiorColor": "Black",
+      "exteriorColor": "Riverside Blue",
+      "features": ["AC", "Infotainment System", "Rear Camera", "Apple CarPlay", "Leather Seats", "Performance Package"],
+      "rating": 4.6,
+      "stars": "★★★★☆",
+      "totalReviews": 75,
+      "totalRentals": 105,
+      "description": "The Chevrolet Camaro delivers thrilling performance and bold styling for an exciting driving experience in Kerala. With its powerful engine and precise handling, it's perfect for enjoying winding hill roads or coastal highways. The aggressive design and sports car dynamics create unforgettable moments for special occasions or simply indulging in the joy of driving.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Rahul V",
+          "date": "2023-11-15",
+          "rating": 4.5,
+          "comment": "Aggressive styling and powerful performance. Handles beautifully on winding roads."
+        },
+        {
+          "id": 2,
+          "name": "Sandra M",
+          "date": "2023-10-29",
+          "rating": 4.5,
+          "comment": "Turned heads everywhere we went. The riverside blue color is eye-catching."
+        },
+        {
+          "id": 3,
+          "name": "Arjun P",
+          "date": "2023-11-03",
+          "rating": 4.5,
+          "comment": "Thrilling acceleration and precise handling. Perfect for driving enthusiasts."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "make": "BMW",
+      "model": "Z4",
+      "year": 2023,
+      "type": "Convertible",
+      "pricePerDay": 9500,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-PP-7788",
+      "image": "https://www.prestigeperformanceyorkshire.co.uk/wp-content/uploads/2025/07/1-6.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "seats": 2,
+      "interiorColor": "Black",
+      "exteriorColor": "Misano Blue",
+      "features": ["AC", "iDrive System", "Rear Camera", "Apple CarPlay", "Leather Seats", "Retractable Hardtop"],
+      "rating": 4.8,
+      "stars": "★★★★☆",
+      "totalReviews": 50,
+      "totalRentals": 70,
+      "description": "The BMW Z4 roadster offers open-top driving pleasure and premium performance for experiencing Kerala's beauty in ultimate style. With its retractable hardtop and responsive handling, it's perfect for romantic coastal drives or enjoying hill station breezes. The luxurious interior and thrilling performance create unforgettable moments under the Kerala sky.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Vikram Singh",
+          "date": "2023-11-18",
+          "rating": 5,
+          "comment": "Pure driving pleasure! The retractable hardtop works seamlessly for open-air enjoyment."
+        },
+        {
+          "id": 2,
+          "name": "Anjali R",
+          "date": "2023-10-22",
+          "rating": 4.5,
+          "comment": "Perfect for romantic coastal drives. The misano blue color is breathtaking."
+        },
+        {
+          "id": 3,
+          "name": "Kiran N",
+          "date": "2023-11-10",
+          "rating": 5,
+          "comment": "Exhilarating performance and luxurious comfort. Worth every rupee for special occasions."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "year": 2023,
+      "type": "Convertible",
+      "pricePerDay": 6800,
+      "available": true,
+      "location": "Ernakulam, Kerala",
+      "plateNumber": "KL-07-QQ-9900",
+      "image": "https://cdn.motor1.com/images/mgl/qkMqGG/s3/2024-mazda-mx-5-miata-jdm.jpg",
+      "fuelType": "Petrol",
+      "transmission": "Manual",
+      "seats": 2,
+      "interiorColor": "Black",
+      "exteriorColor": "Soul Red Crystal",
+      "features": ["AC", "Infotainment System", "Rear Camera", "Apple CarPlay", "Cloth Seats", "Retractable Soft Top"],
+      "rating": 4.5,
+      "stars": "★★★★☆",
+      "totalReviews": 85,
+      "totalRentals": 120,
+      "description": "The Mazda MX-5 Miata offers pure driving enjoyment and open-air freedom for experiencing Kerala's scenic routes. With its lightweight design and responsive manual transmission, it's perfect for enthusiasts seeking connected driving on winding roads. The affordable convertible experience allows for unforgettable journeys along coastal highways or through picturesque countryside.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Arvind Kumar",
+          "date": "2023-11-16",
+          "rating": 4.5,
+          "comment": "Pure driving fun! The manual transmission is engaging on winding hill roads."
+        },
+        {
+          "id": 2,
+          "name": "Meera S",
+          "date": "2023-10-24",
+          "rating": 4,
+          "comment": "The soft top is easy to operate. Perfect for enjoying Kerala's coastal breeze."
+        },
+        {
+          "id": 3,
+          "name": "Sachin P",
+          "date": "2023-11-07",
+          "rating": 4.5,
+          "comment": "Affordable convertible experience. The soul red crystal color is absolutely stunning."
+        }
+      ]
+    }
+  ]
+}

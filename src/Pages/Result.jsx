@@ -252,12 +252,14 @@ const CarCard = ({ car }) => {
         <div className="flex space-x-2">
           <button 
             onClick={handleBookNow}
-            className="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors flex items-center justify-center"
-          >
+            className="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors flex items-center justify-center">
             <BookOpenIcon className="h-5 w-5 mr-1" />
             Book Now
           </button>
-          <button className="flex-1 border border-gray-300 py-2 rounded hover:bg-gray-100 transition-colors">
+          
+          <button  onClick={() => navigate("/car-details", { state: { car } })}  
+          className="flex-1 border border-gray-300 py-2 rounded hover:bg-gray-100 transition-colors">
+            
             Details
           </button>
         </div>

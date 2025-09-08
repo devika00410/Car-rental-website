@@ -1,6 +1,7 @@
 // src/pages/CarList.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { MagnifyingGlassIcon, FunnelIcon, XMarkIcon, UserIcon, StarIcon } from "@heroicons/react/24/outline";
 
 const CarList = () => {
@@ -230,6 +231,13 @@ const CarList = () => {
 
 // Car Card Component
 const CarCard = ({ car }) => {
+    const navigate = useNavigate();
+
+    const handleBookNow = () => {
+        // Navigate to booking page with car details
+        navigate('/booking', { state: { car } });
+    };
+
     return (
         <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 overflow-hidden">
@@ -262,8 +270,15 @@ const CarCard = ({ car }) => {
                 <p className="text-sm text-gray-500 mb-4">{car.location}</p>
 
                 <div className="flex space-x-2">
-                    <button className="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Book Now</button>
-                    <button className="flex-1 border border-gray-300 py-2 rounded hover:bg-gray-100">Details</button>
+                    <button 
+                        onClick={handleBookNow}
+                        className="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+                    >
+                        Book Now
+                    </button>
+                    <button   onClick={() => navigate('/car-details', { state: { car } })}
+                    className="flex-1 border border-gray-300 py-2 rounded hover:bg-gray-100">
+                        Details</button>
                 </div>
             </div>
         </div>

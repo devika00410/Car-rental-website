@@ -2,8 +2,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Form from '../Components/From';
-import FeaturedCars from '../Components/FeaturedCars';
 import DiscountsAndOffers from '../Components/DiscountAndOffers';
+import Services from '../Components/Services';
+import Testimonials from '../Components/Testimonials';
+import LocationMap from '../Components/LocationMap';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -22,11 +24,11 @@ function HomePage() {
     <div>
        <div className="home-page">
       <Form />
-      <FeaturedCars />
+      <Services/>
       <DiscountsAndOffers />
+      <Testimonials/>
+      <LocationMap/>
     </div>
-      <h1>Welcome to Our Website</h1>
-      <button onClick={handleBookNow}>Book Now</button>
     </div>
   );
 }
